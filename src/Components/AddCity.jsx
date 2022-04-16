@@ -20,6 +20,7 @@ const dispatch = useDispatch();
         setPopulation('')
         setCountry('')
     }
+    
         
 
   return (

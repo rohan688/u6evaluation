@@ -15,6 +15,22 @@ export const Home = () => {
             setData(res.data)
         })
     },[])
+
+    const handlesortasc = ()=>{
+        axios.get("http://localhost:8080/cities").then((res)=>{
+            setData(res.data.sort((a,b)=>{
+              return  a.population-b.population;
+            }))
+        })
+    }
+    const handlesortdesc = ()=>{
+        axios.get("http://localhost:8080/cities").then((res)=>{
+            setData(res.data.sort((a,b)=>{
+              return  b.population-a.population;
+            }))
+        })
+    }
+
     
     const editdata = (id) => {
 
@@ -31,7 +47,10 @@ export const Home = () => {
   return (
     <div>
         <button onClick={()=>navigat("/add-city")}>Add City</button>
-        <button onClick={()=>navigat("/add-country")}>Add City</button>
+        <button onClick={()=>navigat("/add-country")}>Add Country</button>
+        <button onClick={handlesortasc}>asc</button>
+        <button onClick={handlesortdesc}>desc</button>
+        
         <table>
             <thead >
                 <tr>

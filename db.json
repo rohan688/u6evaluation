@@ -1,22 +1,16 @@
 {
   "cities": [
     {
-      "city": "nagpur",
-      "population": "322421",
-      "country": "4234",
-      "id": 3
+      "city": "mumbai",
+      "population": "1000",
+      "country": "india",
+      "id": 1
     },
     {
-      "city": "nagpur",
-      "population": "322421",
-      "country": "4234",
-      "id": 4
-    },
-    {
-      "city": "nagpur",
-      "population": "322421",
-      "country": "4234",
-      "id": 5
+      "city": "vashi",
+      "population": "200",
+      "country": "india",
+      "id": 2
     }
   ],
   "country": []
