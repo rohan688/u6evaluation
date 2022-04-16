@@ -1,17 +1,4 @@
 {
-  "cities": [
-    {
-      "city": "mumbai",
-      "population": "1000",
-      "country": "india",
-      "id": 1
-    },
-    {
-      "city": "vashi",
-      "population": "200",
-      "country": "india",
-      "id": 2
-    }
-  ],
+  "cities": [],
   "country": []
 }

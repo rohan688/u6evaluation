@@ -37,7 +37,7 @@ export const Home = () => {
     }
     const deletedata = (id) => {
         axios.delete(`http://localhost:8080/cities/${id}`).then(res => {
-            // setData(data.filter(item => item.id !== id))
+            setData(data.filter(item => item.id !== id))
            dispatch(getcity())
             
         })
