@@ -1,0 +1,23 @@
+{
+  "cities": [
+    {
+      "city": "nagpur",
+      "population": "322421",
+      "country": "4234",
+      "id": 3
+    },
+    {
+      "city": "nagpur",
+      "population": "322421",
+      "country": "4234",
+      "id": 4
+    },
+    {
+      "city": "nagpur",
+      "population": "322421",
+      "country": "4234",
+      "id": 5
+    }
+  ],
+  "country": []
+}
