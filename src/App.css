@@ -40,3 +40,14 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+td,tr,th,table {
+  border:1px solid black;
+  
+}
+th{
+  background-color: black;
+  color: white;
+}
+th,td{
+  padding: 10px;
+}

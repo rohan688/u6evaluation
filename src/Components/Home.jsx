@@ -46,8 +46,7 @@ export const Home = () => {
 
   return (
     <div>
-        <button onClick={()=>navigat("/add-city")}>Add City</button>
-        <button onClick={()=>navigat("/add-country")}>Add Country</button>
+        
         <button onClick={handlesortasc}>asc</button>
         <button onClick={handlesortdesc}>desc</button>
         

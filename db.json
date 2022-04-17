@@ -1,4 +1,9 @@
 {
   "cities": [],
-  "country": []
+  "country": [
+    {
+      "id": 1,
+      "country": "india"
+    }
+  ]
 }

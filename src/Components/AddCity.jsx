@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Addnewcity } from '../Redux/AddCity/action'
 
@@ -8,6 +9,7 @@ const [city, setCity] = useState("")
 const [population, setPopulation] = useState("")
 const [country, setCountry] = useState("")    
 const dispatch = useDispatch();
+const [data,setdata]=useState([]);
 
     const handleSubmit = () => {
         const payload = {
@@ -20,7 +22,17 @@ const dispatch = useDispatch();
         setPopulation('')
         setCountry('')
     }
+  useEffect(()=>{
+   getdata()
+  },[])
     
+  const getdata = ()=>{
+    axios.get("http://localhost:8080/country").then((res)=>{
+    setdata(res.data);
+    console.log(res.data)
+    })
+  }
+
         
 
   return (
@@ -39,11 +51,12 @@ const dispatch = useDispatch();
         onChange={(e) => setPopulation(e.target.value)}
         />
         <br /><br />
-        <input type="text"
-        placeholder='country'
-        value={country}
-        onChange={(e) => setCountry(e.target.value)}
-        />
+      
+       <select  onChange={(e)=>setCountry(e.target.value)}>
+       {data.map((e)=><option key={e.id}>{e.country}</option> )}
+       </select>
+      
+      
         <br /><br />
         <button onClick={handleSubmit}>add city</button>
     </div>
